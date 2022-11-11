@@ -1,0 +1,24 @@
+<p>meld-data-stats-grid works!</p>
+<table>
+    <thead>
+        
+        <th>Timestamp</th>
+        <th>INR</th>
+        <th>CR</th>
+        <th>BR</th>
+        <th>SODIUM</th>
+        <th>MeldScore</th>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of statsDataList">
+            <td>{{item.timestamp}}</td>
+            <td>{{item.inr}}</td>
+            <td>{{item.cr}}</td>
+            <td>{{item.br}}</td>
+            <td>{{item.sodium}}</td>
+            <td>{{item.meldScore}}</td>
+        </tr>
+        
+    </tbody>
+</table>

@@ -1,0 +1,34 @@
+<p>signup works!</p>
+<p>login works!</p>
+<form (ngSubmit)="signup()">
+<table>
+    <tr>
+        <td>UserName:</td>
+        <td><input name="userName" type="text"  required [(ngModel)]="userName" #loginFormControlRef="ngModel"/> </td>
+        <td>
+            <div *ngIf="loginFormControlRef.errors && loginFormControlRef.touched">
+                <p *ngIf="loginFormControlRef.errors['required']">
+                    UserName Requires Value
+                </p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>password:</td>
+        <td><input name="password" type="password" [(ngModel)]="password" required/> </td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td><input name="email" type="email" [(ngModel)]="email"  required/> </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" value="Register"/>
+        </td>
+        <td>
+            <input type="button" value="clear"/>
+             </td>
+    </tr>
+   
+</table>
+</form>

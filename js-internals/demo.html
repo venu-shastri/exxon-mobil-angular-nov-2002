@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script src="source.js"></script>
+        <script>
+            function main(){
+              // var result= add(10,20,true);
+              var obj=new Calculator(10,20);
+              
+              var obj2=new Calculator(20,30);
+
+              console.log(obj1.operand1);
+              console.log(obj2.operand1);
+
+              obj1.add(); //implicit Binding
+              console.log(obj1.result);
+              onj2.add();
+              console.log(obj2.result);
+            }
+            //main();
+            main.apply(10,[]);
+
+        </script>
+    </head>
+    <body></body>
+</html>

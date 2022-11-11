@@ -1,0 +1,38 @@
+<p>meld-calculator-input works!</p>
+
+    <table>
+        <tr>
+            <td>INR</td>
+            <td>
+                <input #inrTextbox type="text" (input)="setInr(inrTextbox.value)" [value]="inr"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Sodium</td>
+            <td>
+                <input #sodiumTextBox  (input)="setSodium(sodiumTextBox.value)" type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td>CR</td>
+            <td>
+                <input #crTextBox  (input)="setCr(crTextBox.value) "type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td>BR</td>
+            <td>
+                <input type="text" #brTextBox (input)="setBr(brTextBox.value)" />
+            </td>
+        </tr>
+       
+        <tr>
+            <td>
+                <button (click)="notifyContainer()">Calculate</button>
+            </td>
+            <td>
+                <button (click)="clear()">Clear</button>
+            </td>
+        </tr>
+    </table>
+

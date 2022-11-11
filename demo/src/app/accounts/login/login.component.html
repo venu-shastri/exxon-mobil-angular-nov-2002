@@ -1,0 +1,29 @@
+<p>login works!</p>
+<form #formGroupInstance="ngForm" (ngSubmit)="login(formGroupInstance.form)">
+<table>
+    <tr>
+        <td>UserName:</td>
+        <td><input name="userName" type="text" ngModel #loginFormControlRef="ngModel" required/> </td>
+        <td>
+            <div *ngIf="loginFormControlRef.errors && loginFormControlRef.touched">
+                <p *ngIf="loginFormControlRef.errors['required']">
+                    UserName Requires Value
+                </p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>password:</td>
+        <td><input name="password" type="password" ngModel required/> </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" value="login"/>
+        </td>
+        <td>
+            <input type="button" value="clear"/>
+             </td>
+    </tr>
+   
+</table>
+</form>

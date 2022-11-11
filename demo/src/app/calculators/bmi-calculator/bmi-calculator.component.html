@@ -1,0 +1,19 @@
+<p>bmi-calculator works!</p>
+<table [formGroup]="bmiDataModel">
+    <tr>
+       <td> Height</td>
+       <td><input type="text" formControlName="height"/></td>
+    </tr>
+    <tr>
+        <td> Weight</td>
+        <td><input type="text" formControlName="weight"/></td>
+     </tr>
+     <tr>
+         <td>
+             <button (click)="calculateBmi()">CalculateBmi</button>
+         </td>
+         <td>
+             <button (click)="reset()">Clear</button>
+         </td>
+     </tr>
+</table>
